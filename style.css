@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 700px;
+    height: 500px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    padding: 15px 0px;
+    position: relative;
+}
+
+.form-control div {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 0, 0, .9);
+    position: absolute;
+    top: 32px;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+label {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+input {
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.form-control>div img {
+    visibility: hidden;
+}
+
+input:checked~div img {
+    visibility: visible;
+}
